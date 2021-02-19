@@ -1,14 +1,14 @@
 <template lang="pug">
     .form
-        select.selct-type.formElement(v-model="form.TypeId")
+        select.select-type.formElement(v-model="form.TypeId")
             option(:value="null") Please select a enterprise type
             option(:value="t.ID" v-for="t in types") {{t.Name}}
-        input.input.formElement(v-model="form.Denomination" placeholder="Denomination") 
-        input.input.formElement(v-model="form.Siret" placeholder="Siret") 
-        input.input.long.formElement(v-model="form.Adress" placeholder="Adress") 
-        input.input.long.formElement(type="number" v-model.number="form.Revenue" placeholder="Revenue") 
-        button.button.formElement(@click="estimate") Estimate
-        span.result.formElement Tax estimated : {{tax}}
+        input.formElement(v-model="form.Denomination" placeholder="Denomination") 
+        input.formElement(v-model="form.Siret" placeholder="Siret") 
+        input.formElement(v-model="form.Adress" placeholder="Adress") 
+        input.formElement(type="number" v-model.number="form.Revenue" placeholder="Revenue") 
+        button.formElement(@click="estimate") Estimate
+        span.formElement Tax estimated : {{tax}}
 </template>
 <script>
 export default {
